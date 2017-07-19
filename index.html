@@ -18,6 +18,11 @@
 
       function doTheSecondPart () {
         console.log('I am now logged in');
+        IN.API.Raw('/people/~?format=json').result(doTheThirdPart);
+      }
+
+      function doTheThirdPart (data) {
+        console.log(data);
       }
     </script>
   </body>
