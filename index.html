@@ -4,15 +4,20 @@
     <title>here, Atom</title>
     <script type="text/javascript" src="//platform.linkedin.com/in.js">
     api_key:   78s4oltbjuwnc6
-    onLoad:    wtf
+    onLoad:    doTheFirstPart
     </script>
   </head>
   <body>
     <h1>Hello</h1>
 
     <script type="text/javascript">
-      function wtf () {
-        console.log('did this work?')
+      function doTheFirstPart () {
+        console.log('did this work?');
+        IN.User.authorize(doTheSecondPart);
+      }
+
+      function doTheSecondPart () {
+        console.log('I am now logged in');
       }
     </script>
   </body>
